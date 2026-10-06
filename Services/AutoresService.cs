@@ -46,7 +46,6 @@ public class AutoresService(IConfiguration configuration)
         using var connection = CreateConnection();
         return await connection.QuerySingleOrDefaultAsync<Datos>(consulta, new { IdAutor = id });
     }
-
     public async Task<int> SaveAsync(Datos autor)
     {
         const string consulta = """
